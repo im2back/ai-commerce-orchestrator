@@ -1,4 +1,4 @@
-package io.github.im2back.memory.persistense.context;
+package io.github.im2back.memory.context;
 
 import jakarta.enterprise.context.RequestScoped;
 

@@ -1,4 +1,4 @@
-package io.github.im2back.orchestration;
+package io.github.im2back.orchestration.agent;
 
 import dev.langchain4j.service.MemoryId;
 import dev.langchain4j.service.SystemMessage;
