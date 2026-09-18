@@ -1,4 +1,4 @@
-package io.github.im2back.orchestration.memory.persistense;
+package io.github.im2back.memory.persistense;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;

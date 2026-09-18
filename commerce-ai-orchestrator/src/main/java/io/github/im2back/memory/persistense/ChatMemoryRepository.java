@@ -1,4 +1,4 @@
-package io.github.im2back.orchestration.memory.persistense;
+package io.github.im2back.memory.persistense;
 
 import io.quarkus.hibernate.orm.panache.PanacheRepositoryBase;
 import jakarta.enterprise.context.ApplicationScoped;
