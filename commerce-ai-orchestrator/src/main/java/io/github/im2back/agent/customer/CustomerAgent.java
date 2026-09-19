@@ -4,6 +4,7 @@ import dev.langchain4j.service.MemoryId;
 import dev.langchain4j.service.SystemMessage;
 import dev.langchain4j.service.UserMessage;
 import io.quarkiverse.langchain4j.RegisterAiService;
+import io.quarkiverse.langchain4j.mcp.runtime.McpToolBox;
 import jakarta.enterprise.context.ApplicationScoped;
 
 /**
@@ -138,7 +139,7 @@ pela ferramenta ou pelo backend.
 - As regras específicas de normalização são definidas pelas descrições e contratos
   das respectivas ferramentas.
 """)
-
+    @McpToolBox("user-service")
     @UserMessage("""
             Solicitação do usuário: {message}
 

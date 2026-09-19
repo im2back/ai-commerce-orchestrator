@@ -4,6 +4,7 @@ import dev.langchain4j.service.MemoryId;
 import dev.langchain4j.service.SystemMessage;
 import dev.langchain4j.service.UserMessage;
 import io.quarkiverse.langchain4j.RegisterAiService;
+import io.quarkiverse.langchain4j.mcp.runtime.McpToolBox;
 import jakarta.enterprise.context.ApplicationScoped;
 
 /**
@@ -186,6 +187,7 @@ Responda sempre em português do Brasil.
 
 Seja profissional, amigável e objetivo.
 """)
+    @McpToolBox("inventory-service")
     @UserMessage("""
             Solicitação do usuário: {message}
 
