@@ -1,4 +1,4 @@
-package io.github.im2back.orchestration.agent.tools;
+package io.github.im2back.orchestration.tools;
 
 import dev.langchain4j.agent.tool.Tool;
 import io.github.im2back.agent.purchase.PurchaseAgent;

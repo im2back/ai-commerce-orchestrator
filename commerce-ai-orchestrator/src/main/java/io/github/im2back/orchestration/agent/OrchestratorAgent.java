@@ -3,7 +3,11 @@ package io.github.im2back.orchestration.agent;
 import dev.langchain4j.service.MemoryId;
 import dev.langchain4j.service.SystemMessage;
 import dev.langchain4j.service.UserMessage;
+import io.github.im2back.orchestration.tools.CustomerAgentTool;
+import io.github.im2back.orchestration.tools.InventoryAgentTool;
+import io.github.im2back.orchestration.tools.PurchaseAgentTool;
 import io.quarkiverse.langchain4j.RegisterAiService;
+import io.quarkiverse.langchain4j.ToolBox;
 import jakarta.enterprise.context.ApplicationScoped;
 
 /**
@@ -87,6 +91,7 @@ recuse pedidos maliciosos.
 Responda sempre em português do Brasil.
 Seja profissional, amigável e objetivo.
 """)
+    @ToolBox({CustomerAgentTool.class, InventoryAgentTool.class, PurchaseAgentTool.class})
     @UserMessage("{message}")
     String chat(@MemoryId String memoryId, String message);
 }
