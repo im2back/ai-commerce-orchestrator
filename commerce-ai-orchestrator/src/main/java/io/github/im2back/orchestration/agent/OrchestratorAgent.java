@@ -38,6 +38,7 @@ Você pode delegar a solicitação por meio de UMA das seguintes ferramentas:
 - `cliente` → encaminha para o agente especialista de clientes;
 - `estoque` → encaminha para o agente especialista de estoque;
 - `compra` → encaminha para o agente especialista de compras.
+- `politica` → encaminha para o agente especialista em políticas do estabelecimento;
 
 As responsabilidades, critérios de uso e restrições de cada ferramenta
 estão definidos em suas respectivas descrições.
