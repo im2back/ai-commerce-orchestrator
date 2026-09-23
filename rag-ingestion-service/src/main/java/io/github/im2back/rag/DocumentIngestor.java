@@ -13,6 +13,7 @@ import jakarta.enterprise.event.Observes;
 import jakarta.inject.Inject;
 
 import java.nio.file.Paths;
+import java.util.List;
 
 @ApplicationScoped
 public class DocumentIngestor {
@@ -23,19 +24,17 @@ public class DocumentIngestor {
     @Inject
     EmbeddingModel embeddingModel;
 
+    @Inject
+    PolicySectionSplitter policySectionSplitter;
+
     public void onStart(@Observes StartupEvent event) {
 
         Document document = FileSystemDocumentLoader.loadDocument(
                 Paths.get("src/main/resources/rag/politicas_comercio_local.md")
         );
 
-        //Remover metadados para o arquivo todo
-       // document.metadata().put("type", "packages");
-
-       //   var splitter = DocumentSplitters.recursive(200, 20);
-
         EmbeddingStoreIngestor ingestor = EmbeddingStoreIngestor.builder()
-                .documentSplitter(splitter)
+                .documentSplitter(policySectionSplitter)
                 .embeddingModel(embeddingModel)
                 .embeddingStore(store)
                 .build();
