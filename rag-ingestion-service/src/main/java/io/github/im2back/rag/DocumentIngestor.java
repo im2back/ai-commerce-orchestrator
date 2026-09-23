@@ -29,9 +29,10 @@ public class DocumentIngestor {
                 Paths.get("src/main/resources/rag/politicas_comercio_local.md")
         );
 
-        document.metadata().put("type", "packages");
+        //Remover metadados para o arquivo todo
+       // document.metadata().put("type", "packages");
 
-        var splitter = DocumentSplitters.recursive(200, 20);
+       //   var splitter = DocumentSplitters.recursive(200, 20);
 
         EmbeddingStoreIngestor ingestor = EmbeddingStoreIngestor.builder()
                 .documentSplitter(splitter)

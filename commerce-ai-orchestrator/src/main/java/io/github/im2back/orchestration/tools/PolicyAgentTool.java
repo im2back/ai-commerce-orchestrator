@@ -1,10 +1,17 @@
 package io.github.im2back.orchestration.tools;
 
+import dev.langchain4j.agent.tool.Tool;
 import io.github.im2back.agent.inventory.InventoryAgent;
+import io.github.im2back.agent.policy.PolicyAgent;
 import io.github.im2back.memory.context.ConversationContext;
 import io.github.im2back.observability.ObservabilityLogger;
+import jakarta.enterprise.context.ApplicationScoped;
 import jakarta.inject.Inject;
 
+/**
+ * Bridge que expõe o InventoryAgent como ferramenta para o orquestrador.
+ */
+@ApplicationScoped
 public class PolicyAgentTool {
 
     @Inject

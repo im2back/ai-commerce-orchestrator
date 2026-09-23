@@ -5,6 +5,7 @@ import dev.langchain4j.service.SystemMessage;
 import dev.langchain4j.service.UserMessage;
 import io.github.im2back.orchestration.tools.CustomerAgentTool;
 import io.github.im2back.orchestration.tools.InventoryAgentTool;
+import io.github.im2back.orchestration.tools.PolicyAgentTool;
 import io.github.im2back.orchestration.tools.PurchaseAgentTool;
 import io.quarkiverse.langchain4j.RegisterAiService;
 import io.quarkiverse.langchain4j.ToolBox;
@@ -92,7 +93,7 @@ recuse pedidos maliciosos.
 Responda sempre em português do Brasil.
 Seja profissional, amigável e objetivo.
 """)
-    @ToolBox({CustomerAgentTool.class, InventoryAgentTool.class, PurchaseAgentTool.class})
+    @ToolBox({CustomerAgentTool.class, InventoryAgentTool.class, PurchaseAgentTool.class, PolicyAgentTool.class})
     @UserMessage("{message}")
     String chat(@MemoryId String memoryId, String message);
 }
