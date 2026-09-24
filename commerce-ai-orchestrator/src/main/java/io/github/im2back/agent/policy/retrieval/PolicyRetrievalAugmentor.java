@@ -1,4 +1,4 @@
-package io.github.im2back.agent.policy;
+package io.github.im2back.agent.policy.retrieval;
 
 import dev.langchain4j.rag.DefaultRetrievalAugmentor;
 import dev.langchain4j.rag.RetrievalAugmentor;
